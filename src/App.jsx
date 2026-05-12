@@ -49,9 +49,9 @@ const Button = ({
                           <>
                             {Icon && <Icon size={20} />}
                             {children}
-                          </>>
+                          </>
                         )}
-          </button>button>
+          </button>
         );
 };
 
@@ -67,7 +67,7 @@ const Input = ({
       {label && (
             <label className="text-[10px] font-black uppercase text-zinc-600 tracking-[0.3em] ml-1">
               {label}
-            </label>label>
+            </label>
         )}
         <div className="relative group">
           {Icon && (
@@ -83,8 +83,8 @@ const Input = ({
                         placeholder={placeholder}
                         className={`w-full bg-zinc-900/40 border border-zinc-800/80 rounded-2xl py-5 ${Icon ? 'pl-14' : 'px-6'} pr-6 text-white outline-none focus:border-[#FACC15] focus:ring-4 focus:ring-[#FACC15]/5 transition-all placeholder:text-zinc-800 font-medium`}
                       />
-        </div>div>
-    </div>div>
+        </div>
+    </div>
   );
 
 // --- VISTA DE AUTENTICACION ---
@@ -133,17 +133,17 @@ const AuthView = ({ mode, setMode }) => {
                                   <div className="flex items-center gap-4">
                                               <div className="w-14 h-14 bg-[#FACC15] rounded-2xl flex items-center justify-center font-black text-black italic text-3xl shadow-[0_0_40px_rgba(250,204,21,0.25)]">
                                                             F
-                                              </div>div>
+                                              </div>
                                               <div className="h-12 w-[2px] bg-zinc-900" />
                                               <div className="flex flex-col">
                                                             <span className="text-zinc-500 font-black tracking-[0.4em] text-[10px] uppercase">
                                                                             Focus App
-                                                            </span>span>
+                                                            </span>
                                                             <span className="text-zinc-700 font-bold text-[9px] uppercase tracking-widest">
                                                                             Protocolo de Alto Rendimiento
-                                                            </span>span>
-                                              </div>div>
-                                  </div>div>
+                                                            </span>
+                                              </div>
+                                  </div>
                         
                                   <div>
                                               <h1 className="text-6xl font-black text-white italic tracking-tighter leading-none uppercase mb-2">
@@ -153,9 +153,9 @@ const AuthView = ({ mode, setMode }) => {
                                                 {mode === 'login'
                                                                   ? 'Sincronizacion de credenciales'
                                                                   : 'Alta de nuevo operador'}
-                                              </p>p>
-                                  </div>div>
-                        </div>div>
+                                              </p>
+                                  </div>
+                        </div>
                 
                         <form onSubmit={handleAuth} className="space-y-6">
                                   <Input
@@ -178,13 +178,13 @@ const AuthView = ({ mode, setMode }) => {
                           {error && (
                         <div className="p-4 rounded-2xl bg-red-500/5 border border-red-500/20 text-red-500 text-[10px] font-black uppercase tracking-widest flex items-center gap-3">
                                       <AlertCircle size={16} /> {error}
-                        </div>div>
+                        </div>
                                   )}
                         
                                   <Button type="submit" className="w-full py-6 text-xl" loading={loading}>
                                     {mode === 'login' ? 'AUTENTICAR' : 'REGISTRAR'}
-                                  </Button>Button>
-                        </form>form>
+                                  </Button>
+                        </form>
                 
                         <div className="mt-12 text-center">
                                   <button
@@ -194,10 +194,10 @@ const AuthView = ({ mode, setMode }) => {
                                     {mode === 'login'
                                                     ? '// Crear cuenta de operador'
                                                     : '// Tengo credenciales de acceso'}
-                                  </button>button>
-                        </div>div>
-                </div>div>
-          </div>div>
+                                  </button>
+                        </div>
+                </div>
+          </div>
         );
 };
 
@@ -266,8 +266,8 @@ export default function App() {
                           <div className="w-20 h-20 border-t-2 border-l-2 border-[#FACC15] rounded-full animate-spin shadow-[0_0_30px_rgba(250,204,21,0.1)]" />
                           <div className="text-[#FACC15] text-[10px] font-black italic tracking-[0.8em] animate-pulse uppercase">
                                     Protocol Sincronizing...
-                          </div>div>
-                  </div>div>
+                          </div>
+                  </div>
                 );
   
     if (!session)
@@ -280,31 +280,31 @@ export default function App() {
                         <div className="flex items-center gap-4">
                                   <div className="w-10 h-10 bg-[#FACC15] rounded-xl flex items-center justify-center font-black text-black italic shadow-md">
                                               F
-                                  </div>div>
+                                  </div>
                                   <div className="hidden sm:block">
                                               <h2 className="text-[10px] font-black tracking-[0.3em] uppercase">
                                                             Focus Console
                                               </h2>h2>
                                               <p className="text-[9px] text-zinc-600 font-bold uppercase truncate max-w-[150px]">
                                                 {session.user.email}
-                                              </p>p>
-                                  </div>div>
-                        </div>div>
+                                              </p>
+                                  </div>
+                        </div>
                         <div className="flex gap-2">
                                   <button
                                                 onClick={() => setView('settings')}
                                                 className="p-3 bg-zinc-900 rounded-2xl text-zinc-500 hover:text-white transition-all"
                                               >
                                               <Settings size={20} />
-                                  </button>button>
+                                  </button>
                                   <button
                                                 onClick={() => supabase.auth.signOut()}
                                                 className="p-3 bg-zinc-900 rounded-2xl text-zinc-500 hover:text-red-500 transition-all"
                                               >
                                               <LogOut size={20} />
-                                  </button>button>
-                        </div>div>
-                </header>header>
+                                  </button>
+                        </div>
+                </header>
           
                 <main className="p-6 max-w-2xl mx-auto pb-40">
                   {view === 'dashboard' && (
@@ -317,11 +317,11 @@ export default function App() {
                                                                 <h1 className="text-5xl font-black italic tracking-tighter uppercase leading-none">
                                                                                   Mis Ciclos
                                                                 </h1>h1>
-                                                </div>div>
+                                                </div>
                                                 <Button onClick={createCycle} icon={Plus} className="px-10">
                                                                 Nuevo
-                                                </Button>Button>
-                                  </div>div>
+                                                </Button>
+                                  </div>
                       
                                   <div className="grid gap-6">
                                     {allCycles.length === 0 ? (
@@ -332,11 +332,11 @@ export default function App() {
                                                                               />
                                                           <p className="text-zinc-700 text-xs font-black uppercase tracking-[0.4em]">
                                                                               Nucleo de datos vacio
-                                                          </p>p>
+                                                          </p>
                                                           <p className="text-zinc-800 text-[9px] mt-2 font-bold uppercase">
                                                                               Inicia un ciclo de 92 dias para registrar
-                                                          </p>p>
-                                        </div>div>
+                                                          </p>
+                                        </div>
                                       ) : (
                                         allCycles.map((c) => (
                                                             <div
@@ -346,7 +346,7 @@ export default function App() {
                                                                                 <div className="flex items-center gap-7">
                                                                                                       <div className="w-16 h-16 bg-zinc-900 rounded-2xl flex items-center justify-center text-zinc-800 group-hover:text-[#FACC15] transition-all border border-zinc-800 group-hover:shadow-[0_0_20px_rgba(250,204,21,0.1)]">
                                                                                                                               <Flame size={32} />
-                                                                                                        </div>div>
+                                                                                                        </div>
                                                                                                       <div className="space-y-1.5">
                                                                                                                               <h4 className="font-black italic text-2xl uppercase tracking-tighter text-zinc-500 group-hover:text-white transition-colors">
                                                                                                                                 {c.label}
@@ -354,25 +354,25 @@ export default function App() {
                                                                                                                               <div className="flex items-center gap-4">
                                                                                                                                                         <span className="text-[10px] text-zinc-700 font-black uppercase tracking-[0.2em] group-hover:text-zinc-400 transition-colors">
                                                                                                                                                                                     Dia {c.currentDay} // 92
-                                                                                                                                                          </span>span>
+                                                                                                                                                          </span>
                                                                                                                                                         <div className="w-32 h-1 bg-zinc-900 rounded-full overflow-hidden border border-zinc-800/50">
                                                                                                                                                                                     <div
                                                                                                                                                                                                                     className="h-full bg-[#FACC15] shadow-[0_0_10px_#FACC15]"
                                                                                                                                                                                                                     style={{ width: `${(c.currentDay / 92) * 100}%` }}
                                                                                                                                                                                                                   />
-                                                                                                                                                          </div>div>
-                                                                                                                                </div>div>
-                                                                                                        </div>div>
-                                                                                  </div>div>
+                                                                                                                                                          </div>
+                                                                                                                                </div>
+                                                                                                        </div>
+                                                                                  </div>
                                                                                 <ChevronRight
                                                                                                         className="text-zinc-800 group-hover:translate-x-2 group-hover:text-white transition-all"
                                                                                                         size={28}
                                                                                                       />
-                                                            </div>div>
+                                                            </div>
                                                           ))
                                       )}
-                                  </div>div>
-                      </div>div>
+                                  </div>
+                      </div>
                         )}
                 
                   {view === 'settings' && (
@@ -382,7 +382,7 @@ export default function App() {
                                                   className="flex items-center gap-3 text-zinc-700 font-black uppercase text-[10px] hover:text-white transition-all tracking-[0.2em]"
                                                 >
                                                 <ChevronLeft size={16} /> Volver al panel
-                                  </button>button>
+                                  </button>
                                   <h1 className="text-6xl font-black italic tracking-tighter uppercase">
                                                 Sistema
                                   </h1>h1>
@@ -397,46 +397,46 @@ export default function App() {
                                                                                   <div>
                                                                                                       <span className="text-sm font-black text-white tracking-widest uppercase block">
                                                                                                                             Red Operativa
-                                                                                                        </span>span>
+                                                                                                        </span>
                                                                                                       <span className="text-[10px] text-zinc-700 font-bold uppercase italic">
                                                                                                                             Sincronizacion Cloud Activada
-                                                                                                        </span>span>
-                                                                                    </div>div>
-                                                                </div>div>
-                                                </div>div>
+                                                                                                        </span>
+                                                                                    </div>
+                                                                </div>
+                                                </div>
                                                 <div className="p-8 border-t border-zinc-900">
                                                                 <h4 className="text-zinc-700 text-[10px] font-black uppercase tracking-[0.4em] mb-4">
                                                                                   Perfil Autenticado
                                                                 </h4>h4>
                                                                 <p className="text-lg font-bold text-zinc-400 font-mono tracking-tight">
                                                                   {session.user.email}
-                                                                </p>p>
-                                                </div>div>
-                                  </div>div>
-                      </div>div>
+                                                                </p>
+                                                </div>
+                                  </div>
+                      </div>
                         )}
-                </main>main>
+                </main>
           
             {/* Footer */}
                 <footer className="fixed bottom-0 left-0 right-0 p-6 border-t border-zinc-900 bg-black/95 backdrop-blur-xl flex justify-around items-center z-40">
                         <div className="text-center">
                                   <p className="text-[9px] text-zinc-700 font-black uppercase tracking-[0.4em] mb-1">
                                               Estado
-                                  </p>p>
+                                  </p>
                                   <p className="text-sm font-black italic text-[#FACC15] tracking-[0.2em]">
                                               ACTIVE
-                                  </p>p>
-                        </div>div>
+                                  </p>
+                        </div>
                         <div className="h-8 w-[1px] bg-zinc-900" />
                         <div className="text-center">
                                   <p className="text-[9px] text-zinc-700 font-black uppercase tracking-[0.4em] mb-1">
                                               Encripcion
-                                  </p>p>
+                                  </p>
                                   <p className="text-sm font-black italic text-zinc-500 tracking-[0.2em]">
                                               AES-256
-                                  </p>p>
-                        </div>div>
-                </footer>footer>
-          </div>div>
+                                  </p>
+                        </div>
+                </footer>
+          </div>
         );
 }</></button>
