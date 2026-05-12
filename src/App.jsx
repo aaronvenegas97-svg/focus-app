@@ -148,7 +148,7 @@ const AuthView = ({ mode, setMode }) => {
                                   <div>
                                               <h1 className="text-6xl font-black text-white italic tracking-tighter leading-none uppercase mb-2">
                                                 {mode === 'login' ? 'Acceso' : 'Registro'}
-                                              </h1>h1>
+                                              </h1>
                                               <p className="text-zinc-600 text-xs font-bold uppercase tracking-[0.1em]">
                                                 {mode === 'login'
                                                                   ? 'Sincronizacion de credenciales'
@@ -284,7 +284,7 @@ export default function App() {
                                   <div className="hidden sm:block">
                                               <h2 className="text-[10px] font-black tracking-[0.3em] uppercase">
                                                             Focus Console
-                                              </h2>h2>
+                                              </h2>
                                               <p className="text-[9px] text-zinc-600 font-bold uppercase truncate max-w-[150px]">
                                                 {session.user.email}
                                               </p>
@@ -313,10 +313,10 @@ export default function App() {
                                                 <div>
                                                                 <h3 className="text-zinc-600 text-[10px] font-black uppercase tracking-[0.4em] mb-1">
                                                                                   Status de Red
-                                                                </h3>h3>
+                                                                </h3>
                                                                 <h1 className="text-5xl font-black italic tracking-tighter uppercase leading-none">
                                                                                   Mis Ciclos
-                                                                </h1>h1>
+                                                                </h1>
                                                 </div>
                                                 <Button onClick={createCycle} icon={Plus} className="px-10">
                                                                 Nuevo
@@ -350,7 +350,7 @@ export default function App() {
                                                                                                       <div className="space-y-1.5">
                                                                                                                               <h4 className="font-black italic text-2xl uppercase tracking-tighter text-zinc-500 group-hover:text-white transition-colors">
                                                                                                                                 {c.label}
-                                                                                                                                </h4>h4>
+                                                                                                                                </h4>
                                                                                                                               <div className="flex items-center gap-4">
                                                                                                                                                         <span className="text-[10px] text-zinc-700 font-black uppercase tracking-[0.2em] group-hover:text-zinc-400 transition-colors">
                                                                                                                                                                                     Dia {c.currentDay} // 92
@@ -385,13 +385,13 @@ export default function App() {
                                   </button>
                                   <h1 className="text-6xl font-black italic tracking-tighter uppercase">
                                                 Sistema
-                                  </h1>h1>
+                                  </h1>
                       
                                   <div className="space-y-8">
                                                 <div className="p-8 bg-zinc-900/20 border border-zinc-800 rounded-[3rem]">
                                                                 <h4 className="text-zinc-600 text-[10px] font-black uppercase tracking-[0.4em] mb-6">
                                                                                   Estado de Conexion
-                                                                </h4>h4>
+                                                                </h4>
                                                                 <div className="flex items-center gap-5 bg-zinc-950/50 p-6 rounded-3xl border border-zinc-900/50">
                                                                                   <div className="w-5 h-5 rounded-full bg-green-500 shadow-[0_0_20px_rgba(34,197,94,0.4)] animate-pulse" />
                                                                                   <div>
@@ -407,7 +407,7 @@ export default function App() {
                                                 <div className="p-8 border-t border-zinc-900">
                                                                 <h4 className="text-zinc-700 text-[10px] font-black uppercase tracking-[0.4em] mb-4">
                                                                                   Perfil Autenticado
-                                                                </h4>h4>
+                                                                </h4>
                                                                 <p className="text-lg font-bold text-zinc-400 font-mono tracking-tight">
                                                                   {session.user.email}
                                                                 </p>
