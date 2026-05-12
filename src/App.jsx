@@ -541,13 +541,13 @@ const App = () => {
     }
   };
 
-  if (authLoading) return (
+  const loadingView = (
     <div style={{minHeight:'100vh',background:'#000',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',gap:'1rem'}}>
       <p style={{color:'#FACC15',fontFamily:'sans-serif',fontSize:'12px',letterSpacing:'0.3em'}}>CARGANDO...</p>
     </div>
   );
 
-  if (!session) return (
+  const authView = (
     <div style={{minHeight:'100vh',background:'#0a0a0a',display:'flex',alignItems:'center',justifyContent:'center',padding:'2rem'}}>
       <div style={{width:'100%',maxWidth:'420px'}}>
         <div style={{marginBottom:'2.5rem',textAlign:'center'}}>
@@ -666,7 +666,7 @@ const App = () => {
     { id: 'config', icon: SettingsIcon, label: 'Perfil' },
   ];
 
-  return (
+  return authLoading ? loadingView : !session ? authView : (
     <AppContainer>
       <MessageBanner errorMessage={errorMessage} />
       <CustomConfirmModal {...confirmState} onConfirm={handleConfirmedAction} onCancel={() => setConfirmState({...confirmState, isOpen: false})} />
